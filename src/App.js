@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Container from './components/Container/Container';
+import Products from './containers/Product/Products/Products';
+import Layout from './components/Layout/Layout';
+import Login from './containers/User/Login/Login';
+import Register from './containers/User/Register/Register';
+import SingleProduct from './containers/Product/SingleProduct/SingleProduct';
+import AddNewProduct from './containers/Product/AddNewProduct/AddNewProduct';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Container>
+          <Layout>
+            <Route exact path='/products' component={Products} />
+            <Route exact path='/addNewProduct' component={AddNewProduct} />
+            <Route exact path='/products/:id' component={SingleProduct} />
+            <Route exact path='/user/login' component={Login} />
+            <Route exact path='/user/register' component={Register} />
+          </Layout>
+        </Container>
+      </Switch>
     </div>
   );
 }
