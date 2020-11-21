@@ -1,10 +1,9 @@
-import { push } from 'connected-react-router';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAddNewProduct, fetchGetCategories } from '../../../store/actions/productActions';
 import './AddNewProduct.css';
 
-const AddNewProduct = () => {
+const AddNewProduct = props => {
 
     const dispatch = useDispatch();
     const user = useSelector(state => state.user.user);
@@ -19,11 +18,11 @@ const AddNewProduct = () => {
     });
 
     useEffect(() => {
-        if (user === []) {
-            dispatch(push('/products'));
-        }
+        if (user.length === 0) {
+            props.history.replace("/products");
+        };
         dispatch(fetchGetCategories());
-    }, [dispatch, categories, data, user]);
+    }, [dispatch, categories, data, user, props.history]);
 
     const changeData = event => {
         const value = event.target.value;
