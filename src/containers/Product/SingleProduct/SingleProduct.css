@@ -1,0 +1,39 @@
+.full-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-info {
+    width: 60%;
+}
+
+.author-boxes {
+    width: 30%;
+}
+
+.info-boxes {
+    text-align: center;
+    border: 1px white solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.product-info img {
+    width: 50%;
+    border-radius: 5px;
+}
+
+.delete-product-btn{
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-product-btn:hover{
+    transition: 1s ease;
+    background: rgb(214, 0, 0);
+}

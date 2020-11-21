@@ -1,0 +1,47 @@
+.addNewProduct-page{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.addNewProduct-form{
+    margin: 0 auto;
+    border: 2px solid white;
+    width: 50%;
+    padding: 50px;
+}
+
+.addNewProduct-form input{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+}
+
+.addNewProduct-form select{
+    display: block;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding: 5px;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.addNewProduct-form option{
+    color: rgb(105, 102, 102);
+}
+
+.addNewProduct-form input::placeholder{
+    color: white;
+}
+
+.addNewProduct-form button{
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: none;
+}
