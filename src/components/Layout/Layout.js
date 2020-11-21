@@ -32,7 +32,7 @@ const Layout = props => {
                         </div>
                     </NavLink>
                     <div className='users-menu'>
-                        {user === null ?
+                        {user.length === 0 ?
                             <>
                                 <NavLink to='/user/register'>Sign Up</NavLink>
                                 <NavLink to='/user/login'>Sign In</NavLink>
