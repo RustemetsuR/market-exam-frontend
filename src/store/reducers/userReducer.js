@@ -16,7 +16,7 @@ const userReducer = (state = initialState, action) =>{
         case LOGIN_FAILURE:
             return {...state, error: action.error};
         case LOGOUT_USER: 
-            return {...state, user: null};
+            return {...state, user: []};
         default:
             return state;
     };
