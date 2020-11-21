@@ -1,0 +1,15 @@
+.category-item-list-box{
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(87, 194, 87);
+    cursor: pointer;
+    width: 200px;
+}
+
+
+.category-title:hover{
+   color: rgb(87, 194, 87);
+   background: white;
+   border-radius: 2px;
+   transition: 1s;
+   padding-left: 20px;
+}
